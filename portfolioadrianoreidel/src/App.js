@@ -3,34 +3,32 @@ import './App.css';
 import images from './images';
 
 function App() {
-  const [livroAtual, setLivroAtual] = useState(images.livrobranco);
+  const pages = [
+    images.livrobranco,       // índice 0
+    images.livrosobre,        // índice 1
+    images.livrosobre2,       // índice 2
+    images.livroexperiencias, // índice 3
+    images.livroprojetos,     // índice 4
+    images.livrocontato,      // índice 5
+  ];
 
-  const trocarImagem = (novaImagem) => {
-    setLivroAtual(novaImagem);
-  };
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
+  const currentPage = pages[currentPageIndex];
 
-   const handleNextPage = () => {
-    if (livroAtual === images.livrosobre) {
-      setLivroAtual(images.livrosobre2);
-    } else if (livroAtual === images.livroexperiencias) {
-      setLivroAtual(images.livroexperiencias2);
-    } else if (livroAtual === images.livroprojetos) {
-      setLivroAtual(images.livroprojetos2);
-    } else if (livroAtual === images.livrocontato) {
-      setLivroAtual(images.livrocontato2);
-    }
+  const handleNextPage = () => {
+    setCurrentPageIndex((prevIndex) => 
+      prevIndex >= pages.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const handlePrevPage = () => {
-    if (livroAtual === images.livrosobre2) {
-      setLivroAtual(images.livrosobre);
-    } else if (livroAtual === images.livroexperiencias2) {
-      setLivroAtual(images.livroexperiencias);
-    } else if (livroAtual === images.livroprojetos2) {
-      setLivroAtual(images.livroprojetos);
-    } else if (livroAtual === images.livrocontato2) {
-      setLivroAtual(images.livrocontato);
-    }
+    setCurrentPageIndex((prevIndex) =>
+      prevIndex <= 0 ? pages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToPage = (index) => {
+    setCurrentPageIndex(index);
   };
 
   return (
@@ -54,61 +52,52 @@ function App() {
         />
 
         <div className="button-column">
-          <button
+          <button className="button-options"
             style={{
               backgroundImage: `url(${images.sobre})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '200px',
-              height: '40px',
               border: 'none',
               cursor: 'pointer',
             }}
-            onClick={() => trocarImagem(images.livrosobre)}
+            onClick={() => goToPage(1)}
           />
-          <button
+
+          <button className="button-options"
             style={{
               backgroundImage: `url(${images.experiencias})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '200px',
-              height: '40px',
               border: 'none',
               cursor: 'pointer',
             }}
-            onClick={() => trocarImagem(images.livroexperiencias)}
+            onClick={() => goToPage(3)}
           />
-          <button
+          <button className="button-options"
             style={{
               backgroundImage: `url(${images.projetos})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '200px',
-              height: '40px',
               border: 'none',
               cursor: 'pointer',
             }}
-            onClick={() => trocarImagem(images.livroprojetos)}
+            onClick={() => goToPage(4)}
           />
-          <button
+          <button className="button-options"
             style={{
               backgroundImage: `url(${images.contato})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '200px',
-              height: '40px',
               border: 'none',
               cursor: 'pointer',
             }}
-            onClick={() => trocarImagem(images.livrocontato)}
+            onClick={() => goToPage(5)}
           />
-          <button
+          <button className="button-links"
             style={{
               backgroundImage: `url(${images.linkedin})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '63px',
-              height: '45px',
               border: 'none',
               cursor: 'pointer',
             }}
@@ -116,13 +105,11 @@ function App() {
           >
           </button>
 
-          <button
+          <button className="button-links"
             style={{
               backgroundImage: `url(${images.github})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '63px',
-              height: '45px',
               border: 'none',
               cursor: 'pointer',
             }}
@@ -130,65 +117,56 @@ function App() {
           >
           </button>
 
-          <button
+          <button className="button-links"
             style={{
               backgroundImage: `url(${images.email})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '63px',
-              height: '45px',
               border: 'none',
               cursor: 'pointer',
             }}
-            
             onClick={() => window.location.href = 'mailto:adrianojosereidel@hotmail.com'}
           >
           </button>
-
         </div>
-
         <img
-          src={livroAtual}
-          alt="livrobranco"
+          src={currentPage}
+          alt="livro-pagina"
           className="portfolio-image-livro"
         />
 
         <div className="button-column">
-          <button
+          <button className="button-arrows"
             style={{
               backgroundImage: `url(${images.setadireita})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '50px',
-              height: '50px',
               border: 'none',
               cursor: 'pointer',
             }}
             onClick={handleNextPage}
           />
-          <button
+          <button className="button-arrows"
             style={{
               backgroundImage: `url(${images.setaesquerda})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '50px',
-              height: '50px',
               border: 'none',
               cursor: 'pointer',
             }}
             onClick={handlePrevPage}
           />
-          <button
+          <button className="button-arrows"
             style={{
               backgroundImage: `url(${images.pincel})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              width: '50px',
-              height: '50px',
               border: 'none',
               cursor: 'pointer',
             }}
-            onClick={() => trocarImagem(images.livrobranco)}
+            onClick={() => {
+              goToPage(0);
+            }}
           />
         </div>
       </div>

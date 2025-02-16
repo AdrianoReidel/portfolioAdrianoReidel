@@ -14,12 +14,12 @@
 }
 
 .portfolio-image-cargo {
-  max-width: 30%;
+  width: 70vh;
   height: auto;
 }
 
 .portfolio-image-nome {
-  max-width: 50%;
+  width: 100vh;
   height: auto;
 }
 
@@ -33,13 +33,13 @@
 }
 
 .portfolio-image-crafting {
-  max-width: 35%;
+  width: 70vh;
   height: auto;
   display: flex;
 }
 
 .portfolio-image-livro {
-  max-width: 35%;
+  width: 70vh;
   height: auto;
   display: flex;
 }
@@ -49,6 +49,21 @@
   flex-direction: column;
   row-gap: 10px;
   align-items: center
+}
+
+.button-options {
+  width: 30vh;
+  height: 6vh;
+}
+
+.button-arrows {
+  width: 6vh;
+  height: 6vh;
+}
+
+.button-links {
+  width: 8vh;
+  height: 5.7vh;
 }
 
 .btn-image { 
