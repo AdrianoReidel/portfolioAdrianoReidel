@@ -1,6 +1,6 @@
 .App {
   /*background-image: url('./fundo.png');*/
-  background-color: #eceaea;
+  background-color: #f6f0f0f4;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -14,12 +14,12 @@
 }
 
 .portfolio-image-cargo {
-  width: 70vh;
+  width: 30vh;
   height: auto;
 }
 
 .portfolio-image-nome {
-  width: 100vh;
+  width: 40vh;
   height: auto;
 }
 
@@ -33,13 +33,13 @@
 }
 
 .portfolio-image-crafting {
-  width: 70vh;
+  width: 30vh;
   height: auto;
   display: flex;
 }
 
 .portfolio-image-livro {
-  width: 70vh;
+  width: 30vh;
   height: auto;
   display: flex;
 }
@@ -51,19 +51,26 @@
   align-items: center
 }
 
+.button-column-mobile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center
+}
+
 .button-options {
-  width: 30vh;
-  height: 6vh;
+  width: 10vh;
+  height: 2vh;
 }
 
 .button-arrows {
-  width: 6vh;
-  height: 6vh;
+  width: 3vh;
+  height: 3vh;
 }
 
 .button-links {
-  width: 8vh;
-  height: 5.7vh;
+  width: 4vh;
+  height: 2.85vh;
 }
 
 .btn-image { 
@@ -73,4 +80,50 @@
   border: none; 
   outline: none; 
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .portfolio-image-cargo {
+    width: 70vh;
+    height: auto;
+  }
+  
+  .portfolio-image-nome {
+    width: 100vh;
+    height: auto;
+  }
+
+  .portfolio-image-crafting {
+    width: 70vh;
+    height: auto;
+    display: flex;
+  }
+  
+  .portfolio-image-livro {
+    width: 70vh;
+    height: auto;
+    display: flex;
+  }
+
+  .button-options {
+    width: 30vh;
+    height: 6vh;
+  }
+  
+  .button-arrows {
+    width: 6vh;
+    height: 6vh;
+  }
+  
+  .button-links {
+    width: 8vh;
+    height: 5.7vh;
+  }
+
+  .button-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center
+  }
 }
