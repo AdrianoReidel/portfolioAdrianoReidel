@@ -142,50 +142,67 @@ function App() {
               </div>
             <div className="image-row">
               <div className="button-column">
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.sobre})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(1)}
-                />
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 1 || currentPageIndex === 2
+                      ? images.sobre2
+                      : images.sobre
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(1)}
+              />
 
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.experiencias})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(3)}
-                />
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 3
+                      ? images.experiencias2
+                      : images.experiencias
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(3)}
+              />
               </div>
 
               <div className="button-column">
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.projetos})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(4)}
-                />
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.contato})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(5)}
-                />
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 4
+                      ? images.projetos2
+                      : images.projetos
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(4)}
+              />
+
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 5
+                      ? images.contato2
+                      : images.contato
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(5)}
+              />
               
               </div>
             </div>
@@ -201,47 +218,66 @@ function App() {
               />
 
               <div className="button-column">
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.sobre})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(1)}
-                />
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 1 || currentPageIndex === 2
+                      ? images.sobre2
+                      : images.sobre
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(1)}
+              />
 
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.experiencias})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(3)}
-                />
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.projetos})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(4)}
-                />
-                <button className="button-options"
-                  style={{
-                    backgroundImage: `url(${images.contato})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => goToPage(5)}
-                />
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 3
+                      ? images.experiencias2
+                      : images.experiencias
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(3)}
+              />
+
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 4
+                      ? images.projetos2
+                      : images.projetos
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(4)}
+              />
+
+              <button className="button-options"
+                style={{
+                  backgroundImage: `url(${
+                    currentPageIndex === 5
+                      ? images.contato2
+                      : images.contato
+                  })`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+                onClick={() => goToPage(5)}
+              />
+
                 <button className="button-links"
                   style={{
                     backgroundImage: `url(${images.linkedin})`,
