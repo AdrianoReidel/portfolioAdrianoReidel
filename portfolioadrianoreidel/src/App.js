@@ -56,41 +56,7 @@ function App() {
       />
       {isMobile ? (
           <>
-          <div className="buttons-mobile">
-                <button className="button-links"
-                  style={{
-                    backgroundImage: `url(${images.linkedin})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => window.open('https://www.linkedin.com/in/adrianoreidel', '_blank', 'noopener,noreferrer')}
-                >
-                </button>
-                <button className="button-links"
-                  style={{
-                    backgroundImage: `url(${images.github})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => window.open('https://github.com/AdrianoReidel', '_blank', 'noopener,noreferrer')}
-                >
-                </button>
-                <button className="button-links"
-                  style={{
-                    backgroundImage: `url(${images.email})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => window.location.href = 'mailto:adrianojosereidel@hotmail.com'}
-                >
-                </button>
-              </div>
+          
             <div className="image-row">
               <img
                 src={images.craftingtable}
@@ -98,7 +64,41 @@ function App() {
                 className="portfolio-image-crafting"
               />
             </div>
-            
+            <div className="buttons-mobile">
+            <button className="button-links"
+              style={{
+                backgroundImage: `url(${images.linkedin})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              onClick={() => window.open('https://www.linkedin.com/in/adrianoreidel', '_blank', 'noopener,noreferrer')}
+            >
+            </button>
+            <button className="button-links"
+              style={{
+                backgroundImage: `url(${images.github})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              onClick={() => window.open('https://github.com/AdrianoReidel', '_blank', 'noopener,noreferrer')}
+            >
+            </button>
+            <button className="button-links"
+              style={{
+                backgroundImage: `url(${images.email})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+              onClick={() => window.location.href = 'mailto:adrianojosereidel@hotmail.com'}
+            >
+            </button>
+          </div>
             <div className="image-row">
               <img
                 src={currentPage}
