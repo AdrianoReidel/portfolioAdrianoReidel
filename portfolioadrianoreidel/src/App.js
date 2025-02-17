@@ -56,7 +56,7 @@ function App() {
       />
       {isMobile ? (
           <>
-          <div className="button-column-mobile">
+          <div className="buttons-mobile">
                 <button className="button-links"
                   style={{
                     backgroundImage: `url(${images.linkedin})`,
@@ -98,8 +98,50 @@ function App() {
                 className="portfolio-image-crafting"
               />
             </div>
+            
             <div className="image-row">
-            <div className="button-column">
+              <img
+                src={currentPage}
+                alt="livro-pagina"
+                className="portfolio-image-livro"
+              />
+            </div>
+            <div className="buttons-mobile">
+                <button className="button-arrows"
+                  style={{
+                    backgroundImage: `url(${images.setaesquerda})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                  onClick={handlePrevPage}
+                />
+                <button className="button-arrows"
+                  style={{
+                    backgroundImage: `url(${images.pincel})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    goToPage(0);
+                  }}
+                />
+                <button className="button-arrows"
+                  style={{
+                    backgroundImage: `url(${images.setadireita})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    border: 'none',
+                    cursor: 'pointer',
+                  }}
+                  onClick={handleNextPage}
+                />
+              </div>
+            <div className="image-row">
+              <div className="button-column">
                 <button className="button-options"
                   style={{
                     backgroundImage: `url(${images.sobre})`,
@@ -147,48 +189,7 @@ function App() {
               
               </div>
             </div>
-            
-            <div className="image-row">
-              <img
-                src={currentPage}
-                alt="livro-pagina"
-                className="portfolio-image-livro"
-              />
-            </div>
-            <div className="button-column-mobile">
-                <button className="button-arrows"
-                  style={{
-                    backgroundImage: `url(${images.setaesquerda})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={handlePrevPage}
-                />
-                <button className="button-arrows"
-                  style={{
-                    backgroundImage: `url(${images.pincel})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => {
-                    goToPage(0);
-                  }}
-                />
-                <button className="button-arrows"
-                  style={{
-                    backgroundImage: `url(${images.setadireita})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                  onClick={handleNextPage}
-                />
-              </div>
+
           </>
         ) : (
           <>
