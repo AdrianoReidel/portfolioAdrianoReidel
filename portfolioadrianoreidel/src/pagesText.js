@@ -38,14 +38,14 @@ export const pagesText = [
     </>,
     <>
       <p>
-        <a href="https://reportagemmissoesjesuiticas.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <a href="https://reportagemmissoesjesuiticas.netlify.app/" target="_blank" rel="noreferrer">
           Página
         </a>{" "}
         para apresentação de trabalho de reportagem desenvolvido por alunos da graduação de Jornalismo.<br />
          - Apliquei HTML e CSS com o projeto criado utilizando ReactJS, para garantir que a navegação fosse fluída e adaptável para os leitores em diferentes
         tamanhos de tela. Todo o layout apresentado foi desenvolvido sob demanda dos responsáveis pela reportagem.<br />
          - O código fonte está público em meu{" "}
-        <a href="https://github.com/AdrianoReidel" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/AdrianoReidel" target="_blank" rel="noreferrer">
           GitHub
         </a>.
       </p>
@@ -55,9 +55,9 @@ export const pagesText = [
     <p>Entre em contato comigo através dos seguintes canais:</p>
     <ul>
       <li>📧 E-mail: <a href="mailto:adrianojosereidel@hotmail.com">adrianojosereidel@hotmail.com</a></li>
-      <li>📱 WhatsApp: <a href="https://wa.me/55997299507" target="_blank">+55 99 7299-9507</a></li>
-      <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/adrianoreidel/" target="_blank">Adriano Reidel</a></li>
-      <li>🐙 GitHub: <a href="https://github.com/AdrianoReidel" target="_blank">github.com/AdrianoReidel</a></li>
+      <li>📱 WhatsApp: <a href="https://wa.me/55997299507" target="_blank" rel="noreferrer">+55 99 7299-9507</a></li>
+      <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/adrianoreidel/" target="_blank" rel="noreferrer">Adriano Reidel</a></li>
+      <li>🐙 GitHub: <a href="https://github.com/AdrianoReidel" target="_blank" rel="noreferrer">github.com/AdrianoReidel</a></li>
     </ul>
   </>,
   ];
