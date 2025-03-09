@@ -2,29 +2,20 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import images from './images';
 import { tecnologias } from './tecnologias';
+import { pagesText } from './pagesText';
 
 function App() {
-  const pages = [
-    images.livrobranco,       
-    images.livrosobre,        
-    images.livrosobre2,       
-    images.livroexperiencias, 
-    images.livroprojetos,     
-    images.livrocontato,      
-  ];
-
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
-  const currentPage = pages[currentPageIndex];
 
   const handleNextPage = () => {
     setCurrentPageIndex((prevIndex) => 
-      prevIndex >= pages.length - 1 ? 0 : prevIndex + 1
+      prevIndex >= pagesText.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handlePrevPage = () => {
     setCurrentPageIndex((prevIndex) =>
-      prevIndex <= 0 ? pages.length - 1 : prevIndex - 1
+      prevIndex <= 0 ? pagesText.length - 1 : prevIndex - 1
     );
   };
 
@@ -124,11 +115,18 @@ function App() {
             </button>
           </div>
             <div className="image-row">
-              <img
-                src={currentPage}
-                alt="livro-pagina"
-                className="portfolio-image-livro"
-              />
+              <div
+                className="livro-container"
+                style={{
+                  backgroundImage: `url(${currentPageIndex === 0 ? images.livrocapa : images.livrobranco})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="livro-text">
+                  {pagesText[currentPageIndex]}
+                </div>
+              </div>
             </div>
             <div className="buttons-mobile">
                 <button className="button-arrows"
@@ -364,11 +362,18 @@ function App() {
                 >
                 </button>
               </div>
-              <img
-                src={currentPage}
-                alt="livro-pagina"
-                className="portfolio-image-livro"
-              />
+              <div
+                className="livro-container"
+                style={{
+                  backgroundImage: `url(${currentPageIndex === 0 ? images.livrocapa : images.livrobranco})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="livro-text">
+                  {pagesText[currentPageIndex]}
+                </div>
+              </div>
 
               <div className="button-column">
                 <button className="button-arrows"
